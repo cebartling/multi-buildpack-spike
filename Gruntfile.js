@@ -8,12 +8,6 @@ module.exports = function(grunt) {
 
 
     grunt.initConfig({
-
-        // ------------------------------------------------------------------------- //
-        // Dev work
-        // ------------------------------------------------------------------------- //
-
-        // compile sass
         sass: {
             options: {
                 // not needed with ruby sass anymore, will be needed for libsass
@@ -26,8 +20,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // list your css and corresponding scss pages here
-                    // I usually just import all partials into style.scss
-                    'public/css/frontend.css' : 'public/sass/frontend.scss'
+                    'public/css/app.css' : 'public/sass/app.scss'
                 }
             },
             dist: {
@@ -37,12 +30,10 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // list your css and corresponding scss pages here
-                    // I usually just import all partials into style.scss
-                    'public/css/frontend.css' : 'public/sass/frontend.scss'
+                    'public/css/app.css' : 'public/sass/app.scss'
                 }
-            },
+            }
         },
-
         autoprefixer: {
             options: {
                 map : true,
@@ -57,30 +48,30 @@ module.exports = function(grunt) {
 
             },
             dev: {
-                src: 'public/css/frontend.css'
+                src: 'public/css/app.css'
             }
         },
 
-        // imageoptim: {
-        //     options: {
-        //         quitAfter : true
-        //     },
-        //     build: {
-        //         src: [
-        //             'dist/public/**/*.{png,gif,jpg,jpeg}',
-        //             'dist/content/**/*.{png,gif,jpg,jpeg}'
-        //         ]
-        //     }
-        // },
-
-        // sprite creation, currently only used for the brand tab
-        sprite:{
-            brands: {
-                src: 'public/images/brand-tabs/*.png',
-                dest: 'public/images/brand-tabs/brand-tabs-sprite.png',
-                destCss: 'public/sass/frontend/elements/_brand-tabs-sprite.scss'
-            }
-        },
+        //// imageoptim: {
+        ////     options: {
+        ////         quitAfter : true
+        ////     },
+        ////     build: {
+        ////         src: [
+        ////             'dist/public/**/*.{png,gif,jpg,jpeg}',
+        ////             'dist/content/**/*.{png,gif,jpg,jpeg}'
+        ////         ]
+        ////     }
+        //// },
+        //
+        //// sprite creation, currently only used for the brand tab
+        //sprite:{
+        //    brands: {
+        //        src: 'public/images/brand-tabs/*.png',
+        //        dest: 'public/images/brand-tabs/brand-tabs-sprite.png',
+        //        destCss: 'public/sass/frontend/elements/_brand-tabs-sprite.scss'
+        //    }
+        //},
 
         // watch files
         watch : {
