@@ -8,6 +8,27 @@ module.exports = function(grunt) {
 
 
     grunt.initConfig({
+        copy: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'web-dev/fonts',
+                        src: '**',
+                        dest: 'public/fonts'
+                    }
+                ]
+            }
+        },
+        clean: {
+            dist: {
+                src: [
+                    'public/css/**/*.css',
+                    'public/css/**/*.css.map',
+                    'public/fonts/**/*.{eot,svg,svgz,ttf,woff}'
+                ]
+            }
+        },
         sass: {
             options: {
                 // not needed with ruby sass anymore, will be needed for libsass
@@ -20,7 +41,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // list your css and corresponding scss pages here
-                    'public/css/app.css' : 'public/sass/app.scss'
+                    'public/css/app.css' : 'web-dev/sass/app.scss'
                 }
             },
             dist: {
@@ -30,7 +51,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // list your css and corresponding scss pages here
-                    'public/css/app.css' : 'public/sass/app.scss'
+                    'public/css/app.css' : 'web-dev/sass/app.scss'
                 }
             }
         },
@@ -123,7 +144,7 @@ module.exports = function(grunt) {
                     livereload: false
                 },
                 files: [
-                    'public/sass/**/*.scss'
+                    'web-dev/sass/**/*.scss'
                 ],
                 // compile on change
                 tasks: ['sass:dev', 'autoprefixer']
@@ -196,6 +217,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'clean:dist',
+        'copy:dist',
         'sass:dist',
         'autoprefixer',
         'rev',
@@ -203,6 +226,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('heroku', [
+        'clean:dist',
+        'copy:dist',
         'sass:dist',
         'autoprefixer',
         'rev',
