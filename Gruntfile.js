@@ -151,9 +151,7 @@ module.exports = function(grunt) {
                         // fonts
                         'public/**/*.{eot,svg,svgz,ttf,woff}',
                         // imgs
-                        'public/**/*.{png,jpeg,jpg,gif}',
-                        // not uploads
-                        '!public/uploads/**'
+                        'public/**/*.{png,jpeg,jpg,gif}'
                     ]
                 }]
             }
@@ -162,7 +160,7 @@ module.exports = function(grunt) {
         // this looks at files to see if a hashed version exists, and rewrites urls
         usemin: {
             html: [
-                'views/**/*.erb'
+                'app/views/**/*.erb'
             ],
             css: [
                 'public/**/*.css'
@@ -205,6 +203,9 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('heroku', [
-        'sass:dist'
+        'sass:dist',
+        'autoprefixer',
+        'rev',
+        'usemin'
     ]);
 };
