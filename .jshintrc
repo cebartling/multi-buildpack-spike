@@ -1,0 +1,28 @@
+{
+    //Enforcers
+    "curly" : true,
+    "eqeqeq" : true,
+    "immed" : false,
+    "noempty" : true,
+    "newcap" : true,
+    "nonbsp" : true,
+    "undef" : true,
+    "unused" : true,
+    "trailing" : true,
+
+    // errors
+    "maxerr" : 1000,
+
+    //Environments
+    "jquery" : true,
+    "browser" : true,
+    "devel" : false,
+
+    // Globals used with undef : true
+    "globals": {
+      "Kahuna" : false,
+      "eventManager" : false,
+      "$eventManager" : false,
+	  "alert" : false
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "multi-buildpack-spike",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [ ],
+  "license": "None",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "http://code.jquery.com/jquery-2.1.0.js",
+    "filepicker": "http://api.filepicker.io/v1/filepicker.js",
+    "bootstrap": "https://github.com/twbs/bootstrap/releases/download/v3.0.0/bootstrap-3.0.0-dist.zip",
+    "AdminLTE": "https://github.com/almasaeed2010/AdminLTE/archive/1.1.zip",
+    "fontawesome": "http://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.0.3.zip",
+    "tokenfield": "https://github.com/sliptree/bootstrap-tokenfield/archive/v0.11.8.zip",
+    "jquery-autosize": "v1.18.6",
+    "dropzone": "https://github.com/enyo/dropzone/archive/v3.8.4.zip",
+    "simple-colorpicker": "https://github.com/tkrotoff/jquery-simplecolorpicker/archive/v0.3.0.zip",
+    "holderjs": "https://github.com/imsky/holder/archive/v2.3.2.zip",
+    "minievents": "https://github.com/allouis/minivents/archive/v1.2.0.zip",
+    "hammer": "https://github.com/EightMedia/jquery.hammer.js/archive/1.0.11.zip",
+    "bootstrap-validator": "https://github.com/nghuuphuoc/bootstrapvalidator/releases/download/v0.4.5/bootstrapvalidator-dist-0.4.5.zip",
+    "jquery-payment": "https://github.com/stripe/jquery.payment/archive/v1.0.3.zip",
+    "jquery-placeholder": "https://github.com/mathiasbynens/jquery-placeholder/archive/v2.0.8.zip"
+  }
+}
