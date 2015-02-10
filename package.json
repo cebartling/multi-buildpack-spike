@@ -1,6 +1,9 @@
 {
   "name": "multi-buildpack-spike",
   "version": "2.0.0",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.0.0",
